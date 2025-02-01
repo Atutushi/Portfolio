@@ -676,27 +676,12 @@ body {
              
 .servicio {
   opacity: 0; /* Comienza invisible */
-  transform: translateX(0); /* Posición inicial */
-  transition: opacity 0.1s ease, transform 0.2s ease; /* Transiciones para la animación */
+  transform: translateX(-50px); /* Comienza desplazado a la derecha */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones para la animación */
 }
 
 .servicio.visible {
   opacity: 1; /* Se vuelve visible */
-}
-
-.servicio.left {
-  transform: translateX(-50px); /* Comienza desplazado a la izquierda */
-}
-
-.servicio.left.visible {
-  transform: translateX(0); /* Se desplaza a su posición original */
-}
-
-.servicio.right {
-  transform: translateX(50px); /* Comienza desplazado a la derecha */
-}
-
-.servicio.right.visible {
   transform: translateX(0); /* Se desplaza a su posición original */
 }
 
