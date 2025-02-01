@@ -49,3 +49,32 @@ function efectoHabilidades() {
     }
 
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const servicios = document.querySelectorAll(".servicio");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Deja de observar después de que el servicio sea visible
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Activa la animación cuando el 50% del servicio es visible
+    }
+  );
+
+  servicios.forEach((servicio, index) => {
+    // Alterna entre las clases "left" y "right" según el índice
+    if (index % 2 === 0) {
+      servicio.classList.add("left"); // Índices pares: desplazar desde la izquierda
+    } else {
+      servicio.classList.add("right"); // Índices impares: desplazar desde la derecha
+    }
+    observer.observe(servicio); // Observa cada servicio
+  });
+});
