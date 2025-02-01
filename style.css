@@ -506,7 +506,7 @@ body {
         /* *********************/
         /* seccion S O B R E  M I */
         /* *********************/
-        
+
     #sobremi {
       background-color: #E2DDEF;
       max-width: 1100px;
@@ -673,7 +673,33 @@ body {
         /* *********************/
         /* seccion S E R V I C I O S */
         /* *********************/
-        
+             
+.servicio {
+  opacity: 0; /* Comienza invisible */
+  transform: translateX(0); /* Posición inicial */
+  transition: opacity 0.1s ease, transform 0.2s ease; /* Transiciones para la animación */
+}
+
+.servicio.visible {
+  opacity: 1; /* Se vuelve visible */
+}
+
+.servicio.left {
+  transform: translateX(-50px); /* Comienza desplazado a la izquierda */
+}
+
+.servicio.left.visible {
+  transform: translateX(0); /* Se desplaza a su posición original */
+}
+
+.servicio.right {
+  transform: translateX(50px); /* Comienza desplazado a la derecha */
+}
+
+.servicio.right.visible {
+  transform: translateX(0); /* Se desplaza a su posición original */
+}
+
         #servicios {
             padding: 100px 15px;
             text-align: center;
@@ -704,10 +730,6 @@ body {
             margin: 0 5px;
             border-radius: 5px;
             transition: .5s;
-        }
-        
-        #servicios .fila .servicio:hover {
-            box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
         }
         
         #servicios .fila .servicio .icono {
