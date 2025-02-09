@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -363,11 +367,11 @@ body {
 /********** INICIO**********/
 
 #inicio {
-    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)), url("./assets/img/fondo-inicio.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)), url("./assets/img/fondo.jpg");
     background-size: cover;
     background-position: center center;
     height: 100vh;
-    width: 100%;
+    width: 100%; 
 }
 
 #inicio .contenido header {
@@ -389,7 +393,8 @@ body {
 
 #inicio .contenido header .contenido-header h1 {
     text-align: center;
-    color: #FF5080;
+    color: #c35e28;
+    border-color: #c35e28;
 }
 
 #inicio .contenido header .contenido-header nav ul {
@@ -407,7 +412,7 @@ body {
 }
 
 #inicio .contenido header .contenido-header nav ul li a:hover {
-    color: #FF5080;
+    color: #c35e28;
 }
 
 #inicio .contenido header .contenido-header .redes a {
@@ -419,28 +424,16 @@ body {
 }
 
 #inicio .contenido header .contenido-header .redes a:hover {
-    color: #FF5080;
+    color: #c35e28;
 }
 
 #inicio .contenido header .contenido-header .seleccionado {
-    color: #FF5080;
+    color: #c35e28;
 }
 
-/* Animación de desvanecimiento */
-@keyframes fadeIn {
-    0% {
-        opacity: 0; /* Comienza completamente transparente */
-        transform: translateY(20px); /* Desplazamiento hacia abajo */
-    }
-    
-    50%{
-      opacity: 1;
-      transform: translateY(0)
-    }
-    100% {
-        opacity: 1; /* Termina completamente visible */
-        transform: translateY(0); /* Regresa a su posición original */
-    }
+.animate__animated.animate__fadeInUp{
+ --animate-duration: 5s;
+ animation-delay: 1s;
 }
 
 #inicio .contenido .presentacion {
@@ -452,8 +445,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: fadeIn 12s ease-in-out;
-    /* Aplica la animación */
 }
 
 #inicio .contenido .presentacion .bienvenida {
@@ -471,7 +462,7 @@ body {
 
 #inicio .contenido .presentacion h2 span {
     font-size: 25px;
-    color: #FF5080;
+    color: #c35e28;
 }
 
 #inicio .contenido .presentacion .descripcion {
@@ -495,7 +486,7 @@ body {
 }
 
 #inicio .contenido .presentacion a:hover {
-    background-color: #FF5080;
+    background-color: #b05d30;
 }
 
 #icono-nav {
@@ -508,8 +499,8 @@ body {
         /* *********************/
 
     #sobremi {
-      background-color: #E2DDEF;
-      max-width: 1100px;
+      background-color: #dbcec0;
+      max-width: 100%;
       margin: auto;
       padding: 100px 15px;
       color: #111135;
@@ -549,7 +540,7 @@ body {
     }
 
     #sobremi .sobremi h2 span {
-      color: #ff5080;
+      color: #c35e28;
     }
 
     #sobremi .sobremi h3 {
@@ -579,7 +570,7 @@ body {
     }
 
     #sobremi .sobremi a:hover {
-      background-color: #FF5080;
+      background-color: #fcf6ee;
       color: #fff;
     }
         /* *********************/
@@ -587,7 +578,7 @@ body {
         /* *********************/
         
         .contenedor-skills {
-            background: linear-gradient( #392828CC, rgba(60, 62, 59, 0.8)), url("./assets/img/fondo-inicio.jpg");
+            background: linear-gradient( #392828CC, rgba(60, 62, 59, 0.8)), url("./assets/img/skills.jpg");
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
@@ -673,10 +664,10 @@ body {
         /* *********************/
         /* seccion S E R V I C I O S */
         /* *********************/
-             
+
 .servicio {
   opacity: 0; /* Comienza invisible */
-  transform: translateX(-50px); /* Comienza desplazado a la derecha */
+  transform: translateX(-1px); /* Comienza desplazado a la derecha */
   transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones para la animación */
 }
 
@@ -688,16 +679,16 @@ body {
         #servicios {
             padding: 100px 15px;
             text-align: center;
-            background-color: #f3f3f3;
+            background-color: #e7dcd5;
         }
         
         #servicios .titulo-seccion {
             text-align: center;
             font-size: 22px;
             text-transform: uppercase;
-            color: #111135;
+            color: #894b36;
             text-decoration: underline;
-            text-decoration-color: #d3d3d3;
+            text-decoration-color: #a3a2a2;
             text-decoration-thickness: 5px;
         }
         
@@ -709,8 +700,10 @@ body {
         }
         
         #servicios .fila .servicio {
+          color: #774f42;
             max-width: 350px;
-            background-color: #fff;
+            background-color: #fcf6ee;
+            border: 3px solid #e1ae68;
             padding: 30px;
             margin: 0 5px;
             border-radius: 5px;
@@ -719,12 +712,17 @@ body {
         
         #servicios .fila .servicio .icono {
             display: inline-block;
-            width: 60px;
-            height: 60px;
+            width: 25px;
+            height: 25px;
             border-radius: 50%;
-            background-color: #d3d3d3;
+            background-color: #fcf6ee;
+            border: 2px solid #e1ae68;
             padding: 20px;
             margin-bottom: 25px;
+        }
+        
+        #servicios1{
+        color: #6c3624;
         }
         
         #servicios .fila .servicio h4 {
@@ -751,7 +749,126 @@ body {
             line-height: 22px;
         }
         
+        footer {
+          background-color: #333;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 40px 20px;
+      }
+      .footer-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          max-width: 1200px;
+          width: 100%;
+      }
+      .footer-section {
+          flex: 1;
+          min-width: 200px;
+          margin: 10px;
+      }
+      .footer-section h3 {
+          margin-bottom: 15px;
+          font-size: 1.5em;
+          border-bottom: 2px solid #ddd;
+          padding-bottom: 5px;
+      }
+      .social-icons {
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+      }
+      .social-icons a {
+          color: #fff;
+          text-decoration: none;
+          margin: 0 10px;
+          font-size: 24px;
+          transition: transform 0.3s ease, color 0.3s ease;
+      }
+      .social-icons a:hover {
+            color: #925642;
+          transform: scale(1.2);
+      }
+      .contact-form {
+          display: flex;
+          flex-direction: column;
+          margin-top: 20px;
+          background-color: #444;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+      .form-group {
+          position: relative;
+          margin-bottom: 20px;
+      }
+      .form-group input, .form-group textarea {
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid #636363; /* Borde inferior */
+        width: 100%;
+        max-width: 95%; /* Limitar el ancho del formulario */
+        background-color: transparent; /* Fondo transparente */
+        color: #8b5e4f; /* Color del texto */
+        transition: border-color 0.3s ease, color 0.3s ease;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+        outline: none;
+        border-color: #af7d6d; /* Color del borde al enfocar */
+        color: #8b5e4f; /* Cambiar color del texto al enfocar */
+    }
+    .form-group input:not(:placeholder-shown), .form-group textarea:not(:placeholder-shown) {
+        border-color: #af7d6d; /* Mantener el color del borde al ingresar texto */
+        color: #cfbab2; /* Cambiar color del texto al ingresar texto */
+    }
+    .form-group label {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        color: #ccc;
+        transition: 0.2s ease all;
+        pointer-events: none; /* Evitar que el label interfiera con el input */
+    }
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:focus + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+        top: -10px;
+        left: 10px;
+        font-size: 12px;
+        color: #a4614b; /* Color del label al enfocar */
+    }
+      .contact-form button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          border: 2px solid #808080;
+          background-color: transparent; /* Color del botón */
+          color: white;
+          cursor: pointer;
+          transition: background-color 0.5s ease;
+      }
+      .contact-form button:hover {
+          background-color: #8b5e4f; /* Color del botón al pasar el ratón */
+          border: 2px solid #c6a99f;
+      }
+      .footer-bottom {
+          margin-top: 20px;
+          text-align: center;
+          font-size: 14px;
+      }
+      @media (max-width: 600px) {
+          .footer-container {
+              flex-direction: column;
+              align-items: center;
+          }
+      }
 
+
+
+  
         /* *********************/
         /* seccion R E S P O N S I V E */
         /* *********************/
@@ -818,4 +935,5 @@ body {
             .contenedor-skills {
                 padding: 50px 20px;
             }
-} 
+        
+}

@@ -47,7 +47,6 @@ function efectoHabilidades() {
         document.getElementById("js").classList.add("barra-progreso2");
         document.getElementById("bd").classList.add("barra-progreso3");
     }
-
 }
 
 
@@ -62,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }, {
-    threshold: 0.1 // Activa la animación cuando el 10% del servicio es visible
+    threshold: 0.5 // Activa la animación cuando el 50% del servicio es visible
   });
 
   servicios.forEach(servicio => {
